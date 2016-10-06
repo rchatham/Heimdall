@@ -558,7 +558,7 @@ open class Heimdall {
     
     fileprivate class func obtainKey(_ tag: String) -> SecKey? {
         var keyRef: AnyObject?
-        let query: Dictionary<String, AnyObject> = [
+        let query: [String: AnyObject] = [
             String(kSecAttrKeyType): kSecAttrKeyTypeRSA,
             String(kSecReturnRef): kCFBooleanTrue as CFBoolean,
             String(kSecClass): kSecClassKey as CFString,
@@ -581,7 +581,7 @@ open class Heimdall {
     
     fileprivate class func obtainKeyData(_ tag: String) -> Data? {
         var keyRef: AnyObject?
-        let query: Dictionary<String, AnyObject> = [
+        let query: [String: AnyObject] = [
             String(kSecAttrKeyType): kSecAttrKeyTypeRSA,
             String(kSecReturnData): kCFBooleanTrue as CFBoolean,
             String(kSecClass): kSecClassKey as CFString,
